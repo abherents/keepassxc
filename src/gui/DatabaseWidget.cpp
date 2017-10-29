@@ -137,13 +137,14 @@ DatabaseWidget::DatabaseWidget(Database* db, QWidget* parent)
     m_editGroupWidget = new EditGroupWidget();
     m_editGroupWidget->setObjectName("editGroupWidget");
     m_changeMasterKeyWidget = new ChangeMasterKeyWidget();
+    m_changeMasterKeyWidget->setObjectName("changeMasterKeyWidget");
     m_changeMasterKeyWidget->headlineLabel()->setText(tr("Change master key"));
-    m_csvImportWizard = new CsvImportWizard();
-    m_csvImportWizard->setObjectName("csvImportWizard");
     QFont headlineLabelFont = m_changeMasterKeyWidget->headlineLabel()->font();
     headlineLabelFont.setBold(true);
     headlineLabelFont.setPointSize(headlineLabelFont.pointSize() + 2);
     m_changeMasterKeyWidget->headlineLabel()->setFont(headlineLabelFont);
+    m_csvImportWizard = new CsvImportWizard();
+    m_csvImportWizard->setObjectName("csvImportWizard");
     m_databaseSettingsWidget = new DatabaseSettingsWidget();
     m_databaseSettingsWidget->setObjectName("databaseSettingsWidget");
     m_databaseOpenWidget = new DatabaseOpenWidget();
